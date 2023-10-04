@@ -40,6 +40,8 @@ Route::get('pacientes/{paciente}/edit',[PacienteController::class, 'edit'])->nam
 // crear la ruta para actualizar un paciente
 Route::put('pacientes/{paciente}',[PacienteController::class, 'update'])->name('pacientes.update');
 
+
+
 // crear la ruta para eliminar un paciente
 Route::delete('pacientes/{paciente}',[PacienteController::class, 'destroy'])->name('pacientes.destroy');
 

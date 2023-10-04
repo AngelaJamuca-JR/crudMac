@@ -81,7 +81,7 @@ class PacienteController extends Controller
     {
         //
         $paciente->delete();
-        return redirect()->route('pacientes.index');
+        return redirect()->route('pacientes.index', $paciente) ->with('success', 'Paciente Eliminado');
         
     }
 }

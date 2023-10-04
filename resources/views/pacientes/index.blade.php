@@ -33,7 +33,12 @@
                     <td  style="border: 1px solid black;">
                                                              <a href="{{ route('pacientes.show',$p ->idPaciente) }}">VER</a>
                                                              <a href="{{ route('pacientes.edit',$p ->idPaciente) }}">EDITAR</a>
-                                                            Borrar
+                                                            <form method= "POST" action="{{ route('pacientes.destroy',$p ->idPaciente) }}"
+                                                                onsubmit="return confirm('Esta seguro de borrar este Paciente?');">
+                                                                @csrf
+                                                                @method('Delete')
+                                                                <button type = "submit">BORRAR</button>
+                                                            </form>
                                                             </td>
                 </tr>
 

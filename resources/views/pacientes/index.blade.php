@@ -34,7 +34,9 @@
                                                              <a href="{{ route('pacientes.show',$p ->idPaciente) }}">VER</a>
                                                              <a href="{{ route('pacientes.edit',$p ->idPaciente) }}">EDITAR</a>
                                                             <form method= "POST" action="{{ route('pacientes.destroy',$p ->idPaciente) }}"
-                                                                onsubmit="return confirm('Esta seguro de borrar este Paciente?');">
+                                                                onsubmit="return confirm('Esta seguro de borrar este Paciente?');"
+                                                                style ="display: inline-block">
+                                                                
                                                                 @csrf
                                                                 @method('Delete')
                                                                 <button type = "submit">BORRAR</button>
